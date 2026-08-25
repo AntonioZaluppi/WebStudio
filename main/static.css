@@ -1,5 +1,34 @@
 :root {
-    --color-white: #fff;
+    /*NEUTRAL*/
+    --color-white: rgba(255, 255, 255, 1);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-gray: rgba(250, 251, 252, 1);
+    --color-gray-50: rgba(245, 246, 248, 1);
+    --color-gray-100: rgba(235, 236, 238, 1);
+    --color-gray-300: rgba(156, 163, 175, 1);
+    --color-gray-500: rgba(107, 114, 128, 1);
+    --color-gray-900: rgba(21, 32, 46, 1);
+    --color-black-95: rgba(15, 25, 36, 1);
+    /*BRAND*/
+    --color-primaty: rgba(45, 125, 246, 1);
+    --color-primary-hover: rgba(31, 106, 224, 1);
+    /*ACCENT*/
+    --color-blue-soft: rgba(227, 237, 252, 1);
+    --color-peach-soft: rgba(252, 231, 218, 1);
+    --color-mint-soft: rgba(226, 242, 233, 1);
+    --color-cream: rgba(255, 233, 184, 1);
+    --color-violet-soft: rgba(232, 229, 252, 1);
+    /*STATUS*/
+    --color-success-bg: rgba(230, 244, 236, 1);
+    --color-success-text: rgba(46, 125, 82, 1);
+    /*EXTRA*/
+    --color-blue: rgba(59, 130, 246, 1);
+    --color-blue-black: rgba(21, 61, 122, 1);
+    --color-red: rgba(255, 115, 115, 1);
+    --color-orange: rgba(237, 138, 82, 1);
+    --color-green: rgba(79, 176, 121, 1);
+    --color-violet: rgba(139, 125, 246, 1);
+    --color-yellow: rgba(255, 197, 85, 1);
 }
 
 .container_1440px {
