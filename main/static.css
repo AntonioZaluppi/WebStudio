@@ -1,54 +1,79 @@
 :root {
-    /*NEUTRAL*/
-    --color-white: rgba(255, 255, 255, 1);
-    --color-white-20: rgb(var(--color-white)/ 0.2);
-    --color-gray: rgba(250, 251, 252, 1);
-    --color-gray-50: rgba(245, 246, 248, 1);
-    --color-gray-100: rgba(235, 236, 238, 1);
-    --color-gray-300: rgba(156, 163, 175, 1);
-    --color-gray-500: rgba(107, 114, 128, 1);
-    --color-gray-900: rgba(21, 32, 46, 1);
-    --color-black-95: rgba(15, 25, 36, 1);
-    /*BRAND*/
-    --color-primary: rgba(45, 125, 246, 1);
-    --color-primary-hover: rgba(31, 106, 224, 1);
-    /*ACCENT*/
-    --color-blue-soft: rgba(227, 237, 252, 1);
-    --color-peach-soft: rgba(252, 231, 218, 1);
-    --color-mint-soft: rgba(226, 242, 233, 1);
-    --color-cream: rgba(255, 233, 184, 1);
-    --color-violet-soft: rgba(232, 229, 252, 1);
-    /*STATUS*/
-    --color-success-bg: rgba(230, 244, 236, 1);
-    --color-success-text: rgba(46, 125, 82, 1);
-    /*EXTRA*/
-    --color-blue: rgba(59, 130, 246, 1);
-    --color-blue-black: rgba(21, 61, 122, 1);
-    --color-red: rgba(255, 115, 115, 1);
-    --color-orange: rgba(237, 138, 82, 1);
-    --color-green: rgba(79, 176, 121, 1);
-    --color-violet: rgba(139, 125, 246, 1);
-    --color-yellow: rgba(255, 197, 85, 1);
+    /* NEUTRAL */
+    --white-rgb: 255 255 255;
+    --gray-25:  rgb(250 251 252);
+    --gray-50:  rgb(245 246 248);
+    --gray-100: rgb(235 236 238);
+    --gray-300: rgb(156 163 175);
+    --gray-500: rgb(107 114 128);
+    --gray-900: rgb(21 32 46);
+    --gray-950-rgb: 15 25 36;
+
+    /* BRAND */
+    --blue-500: rgb(45 125 246);
+    --blue-600: rgb(31 106 224);
+    --blue-700: rgb(21 61 122);   /* был blue-black */
+    --blue-400: rgb(59 130 246);  /* был blue */
+    --blue-50:  rgb(227 237 252); /* был blue-soft */
+
+    /* ACCENT */
+    --peach-50:  rgb(252 231 218);
+    --mint-50:   rgb(226 242 233);
+    --cream-50:  rgb(255 233 184);
+    --violet-50: rgb(232 229 252);
+    --green-50:  rgb(230 244 236);
+
+    /* EXTRA */
+    --red-400:    rgb(255 115 115);
+    --orange-500: rgb(237 138 82);
+    --green-500:  rgb(79 176 121);
+    --green-700:  rgb(46 125 82);
+    --violet-500: rgb(139 125 246);
+    --yellow-400: rgb(255 197 85);
 }
 
 :root {
-    --container-max: 1440px;
-}
+    /* Поверхности */
+    --color-bg:             var(--gray-50);
+    --color-surface:        rgb(var(--white-rgb));
+    --color-surface-subtle: var(--gray-25);
+    --color-surface-hover:  var(--gray-100);
 
-:root {
-    --font-body: manrope-variabe, sans-serif;
+    /* Текст */
+    --color-text:          var(--gray-900);
+    --color-text-muted:    var(--gray-500);
+    --color-text-disabled: var(--gray-300);
+    --color-text-inverse:  rgb(var(--white-rgb));
 
-    --fs-h1: clamp(2rem, 1.7rem + 1.5vw, 3.125rem);
-    --fs-h2: clamp(1.625rem, 1.45rem + 0.9vw, 2.375rem);
-    --fs-h3: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-    --fs-h4: clamp(1.0625rem, 1rem + 0.3vw, 1.125rem);
-    --fs-h5: 1rem;
+    /* Границы и оверлеи */
+    --color-border:        var(--gray-100);
+    --color-border-strong: var(--gray-300);
+    --color-overlay:       rgb(var(--gray-950-rgb) / 0.6);
+    --color-glass:         rgb(var(--white-rgb) / 0.2);
 
-    --fs-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
-    --fs-small: 0.875rem;
+    /* Действия */
+    --color-action:        var(--blue-500);
+    --color-action-hover:  var(--blue-600);
+    --color-action-text:   rgb(var(--white-rgb));
+    --color-action-subtle: var(--blue-50);
+    --color-focus:         var(--blue-400);
 
-    --lh-tight: 1.15;
-    --lh-normal: 1.6;
+    /* Статусы */
+    --color-success-bg:   var(--green-50);
+    --color-success-text: var(--green-700);
+    --color-warning-bg:   var(--cream-50);
+    --color-warning-text: var(--orange-500);
+    --color-danger-bg:    rgb(255 235 235);
+    --color-danger-text:  var(--red-400);
+    --color-info-bg:      var(--violet-50);
+    --color-info-text:    var(--violet-500);
+
+    /* Декор */
+    --color-decor-1: var(--blue-50);
+    --color-decor-2: var(--peach-50);
+    --color-decor-3: var(--mint-50);
+    --color-decor-4: var(--cream-50);
+    --color-decor-5: var(--violet-50);
 }
 
 :root {
@@ -74,14 +99,37 @@
     font-display: swap;
 }
 
+:root {
+    --font-body: manrope-variabe, sans-serif;
+
+    --fs-h1: clamp(2rem, 1.7rem + 1.5vw, 3.125rem);
+    --fs-h2: clamp(1.625rem, 1.45rem + 0.9vw, 2.375rem);
+    --fs-h3: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --fs-h4: clamp(1.0625rem, 1rem + 0.3vw, 1.125rem);
+    --fs-h5: 1rem;
+
+    --lh-tight: 1.15;
+    --lh-normal: 1.6;
+
+    --fs-lead: 1.0625rem;
+    --fs-body: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.8125rem;
+    --fs-2xs: 0.75rem;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --container-max: 1440px;
+}
+
 :focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--color-action);
     outline-offset: 2px;
 }
 
@@ -90,22 +138,41 @@ img, svg {
     max-width: 100%;
 }
 
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
-h4 { font-size: var(--fs-h4); }
-h5 { font-size: var(--fs-h5); }
+h1 { font-size: var(--fs-h1); font-weight: 800; }
+h2 { font-size: var(--fs-h2); font-weight: 800; }
+h3 { font-size: var(--fs-h3); font-weight: 700; }
+h4 { font-size: var(--fs-h4); font-weight: 700; }
+h5 { font-size: var(--fs-h5); font-weight: 700; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-body), serif;
+    line-height: var(--lh-tight);
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
 
 body {
     padding: var(--space-5) var(--space-6) var(--space-5) var(--space-6);
-    background-color: var(--color-gray-50);
+    background-color: var(--color-bg);
+
+    font-family: var(--font-body), serif;
+    font-size: var(--fs-body);
+    line-height: var(--lh-normal);
+    color: var(--color-text);
 }
 
 .container {
     max-width: var(--container-max);
     margin-inline: auto;
-    background-color: var(--color-white);
-    border-radius: 32px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-3);
 }
 
 header {
